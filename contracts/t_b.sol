@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract Dapp1 {
+contract t_b {
     mapping (address => uint256) tipjars;
     
     function tip(address _channel) public payable {
