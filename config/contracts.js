@@ -6,7 +6,7 @@ module.exports = {
       host: "localhost", // Host of the blockchain node
       port: 8546, // Port of the blockchain node
       type: "ws" // Type of connection (ws or rpc),
-      // Accounts to use instead of the default account to populate your wallet.
+      // Accounts to use instead of the default account to populate your wallet
       // The order here corresponds to the order of `web3.eth.getAccounts`, so the first one is the `defaultAccount`
       /*,accounts: [
         {
@@ -52,10 +52,10 @@ module.exports = {
     //strategy: 'implicit',
 
     contracts: {
-      // example:
-      //SimpleStorage: {
-      //  args: [ 100 ]
-      //}
+      SimpleStorage: {
+        fromIndex: 0,
+        args: [100]
+      }
     }
   },
 
