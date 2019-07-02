@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Tabs, Tab} from 'react-bootstrap';
 
 import EmbarkJS from 'Embark/EmbarkJS';
@@ -13,11 +14,17 @@ import ENS from './components/ens';
 import EmbarkJS from 'Embark/EmbarkJS';
 
 >>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
+=======
+
+import EmbarkJS from 'Embark/EmbarkJS';
+
+>>>>>>> resetProject
 
 import './dapp.css';
 
 class App extends React.Component {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   constructor(props) {
     super(props);
@@ -68,16 +75,13 @@ class App extends React.Component {
   handleSelect(key) {
     this.setState({ activeKey: key });
   }
+=======
+>>>>>>> resetProject
 
   render() {
-    const ensEnabled = EmbarkJS.Names.currentNameSystems && EmbarkJS.Names.isAvailable();
-    if (this.state.error) {
-      return (<div>
-        <div>Something went wrong connecting to ethereum. Please make sure you have a node running or are using metamask to connect to the ethereum network:</div>
-        <div>{this.state.error}</div>
-      </div>);
-    }
+    
     return (<div>
+<<<<<<< HEAD
       <h3>Embark - Usage Example</h3>
       <Tabs onSelect={this.handleSelect} activeKey={this.state.activeKey} id="uncontrolled-tab-example">
         <Tab eventKey={1} title={this._renderStatus('Blockchain', this.state.blockchainEnabled)}>
@@ -101,6 +105,10 @@ class App extends React.Component {
       <h3>Yo Dima.</h3>
       
 >>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
+=======
+      <h3>Yo Dima.</h3>
+      
+>>>>>>> resetProject
     </div>);
   }
 }

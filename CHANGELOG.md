@@ -19,7 +19,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package embark-dapp-template-demo
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> resetProject
 
 
 
@@ -30,7 +33,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package embark-dapp-template-demo
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> resetProject
 
 >>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
 
@@ -41,7 +47,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package embark-dapp-template-demo
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> resetProject
 
 
 >>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
@@ -55,10 +64,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * add repository.directory field to package.json ([a9c5e1a](https://github.com/embark-framework/embark/commit/a9c5e1a))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 * **@embark/pipeline:** Add `enabled` property to pipeline config ([5ea4807](https://github.com/embark-framework/embark/commit/5ea4807))
 
 =======
 * **@embark/pipeline:** Add `enabled` property to pipeline config ([5ea4807](https://github.com/embark-framework/embark/commit/5ea4807))
 >>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
+=======
+* **@embark/pipeline:** Add `enabled` property to pipeline config ([5ea4807](https://github.com/embark-framework/embark/commit/5ea4807))
+>>>>>>> resetProject
 * normalize README and package.json bugs, homepage, description ([5418f16](https://github.com/embark-framework/embark/commit/5418f16))
