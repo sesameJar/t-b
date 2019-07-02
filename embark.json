@@ -1,9 +1,5 @@
 {
   "contracts": ["contracts/**"],
-<<<<<<< HEAD
-
-=======
->>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
   "app": {
     "js/dapp.js": ["app/dapp.js"],
     "index.html": "app/index.html",
@@ -15,10 +11,6 @@
     "web3": "1.0.0-beta",
     "solc": "0.5.0",
     "ipfs-api": "17.2.4"
-<<<<<<< HEAD
-
-=======
->>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
   },
   "plugins": {
     "embarkjs-connector-web3": {}
