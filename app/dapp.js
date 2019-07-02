@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 import {Tabs, Tab} from 'react-bootstrap';
 
 import EmbarkJS from 'Embark/EmbarkJS';
@@ -7,11 +8,17 @@ import Blockchain from './components/blockchain';
 import Whisper from './components/whisper';
 import Storage from './components/storage';
 import ENS from './components/ens';
+=======
+
+import EmbarkJS from 'Embark/EmbarkJS';
+
+>>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
 
 import './dapp.css';
 
 class App extends React.Component {
 
+<<<<<<< HEAD
   constructor(props) {
     super(props);
 
@@ -86,6 +93,14 @@ class App extends React.Component {
           <ENS enabled={ensEnabled}/>
         </Tab>
       </Tabs>
+=======
+
+  render() {
+    
+    return (<div>
+      <h3>Yo Dima.</h3>
+      
+>>>>>>> f17c5c0a1e59bb8260577f3ddcb132c1efe5cf39
     </div>);
   }
 }
