@@ -20,10 +20,18 @@ config({
 });
 
 contract("T_b", function () {
- it("contract has deployed", async ()=> {
-   let address = await T_b.options.address
-   assert.ok(address)
- })
- it("")
-  
+  it("contract has deployed", async () => {
+    let address = await T_b.options.address
+    assert.ok(address)
+  })
+
+  it("Withdrawal from empty tipjar", async () => {
+    try {
+      await T_b.methods.withdraw().send();
+      assert.ok(false)
+    }
+    catch (error) {
+      assert.ok(error.message.includes("The tipjar is empty"))
+    }
+  })
 });
