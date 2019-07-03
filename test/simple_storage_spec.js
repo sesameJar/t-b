@@ -20,10 +20,30 @@ config({
 });
 
 contract("T_b", function () {
+
  it("contract has deployed", async ()=> {
    let address = await T_b.options.address
    assert.ok(address)
  })
- it("")
+
+ it("Tip must be positive", async () => {
+   try {
+    await T_b.methods.tip(accounts[1]).send({
+      value : 0
+    })
+   }
+   catch(error) {
+     console.log(11111, error.message)
+    assert.ok(error.message.includes("NO value."))
+   }
+ })
+
+ it("Positive tip must be working", async () => {
+  await T_b.methods.tip(accounts[1]).send({
+    value : 10
+  })
+  let tip =await T_b.methods.checkBalance().call({from : accounts[1]})
+  assert.equal(tip, 10)
+ })
   
 });
