@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract t_b {
+contract T_b {
     event tipMade(address tipper, address channel, uint256 amount);
     event withdrawTips(address channelOwner, uint256 amount);
     // Address is the channel owner's public address
