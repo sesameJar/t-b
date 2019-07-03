@@ -46,4 +46,29 @@ contract("T_b", function () {
   assert.equal(tip, 10)
  })
   
+  it("contract has deployed", async () => {
+    let address = await T_b.options.address
+    assert.ok(address)
+  })
+
+  it("Withdrawal from empty tipjar", async () => {
+    try {
+      await T_b.methods.withdraw().send();
+      assert.ok(false)
+    }
+    catch (error) {
+      assert.ok(error.message.includes("The tipjar is empty"))
+    }
+  })
+
+  it("Withdrawal from non-empty tipjar", async () => {
+    await T_b.methods.tip(accounts[0]).send({ value: 1000000000000000 })
+    let accountBalance = await web3.eth.getBalance(accounts[0])
+    let tipJarBalance = await T_b.methods.checkBalance().call()
+    assert.ok(tipJarBalance == 1000000000000000)
+    await T_b.methods.withdraw().send();
+    assert (await web3.eth.getBalance(accounts[0]) > accountBalance)
+    tipJarBalance = await T_b.methods.checkBalance().call()
+    assert.ok(tipJarBalance == 0)
+  })
 });
