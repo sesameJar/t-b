@@ -19,7 +19,7 @@ const data = {
     "publicKey" : "0x06854f66338A7F9FD597E790A12F9E930D4Bd88B",
     "tips" : 0,
     "title" : "Chernobyl 2",
-    "youtubeLink" : "https://www.youtube.com/watch?v=FfDa8tR25dk"
+    "youtubeLink" : "https://www.youtube.com/watch?v=jfY3RBzi6CI"
   } ]
 }
 
