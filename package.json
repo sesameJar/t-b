@@ -21,10 +21,5 @@
     "react-bootstrap": "0.32.4",
     "react-dom": "16.7.0"
   },
-  "gitHead": "21f5367bebe10594ffcc26f3aa4b574b1226472a",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "firebase-admin": "^8.2.0",
-    "firebase-functions": "^3.0.2"
-  }
+  "gitHead": "21f5367bebe10594ffcc26f3aa4b574b1226472a"
 }
