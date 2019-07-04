@@ -1,5 +1,5 @@
 import React from 'react'
-import getAllVideos from './api.js'
+import getVideos from './api.js'
 import youtubeParser from './util.js'
 
 function VideoThumbAndTitle(props) {
@@ -24,11 +24,12 @@ class VideoList extends React.Component {
   }
 
   async getVideos() {
-    this.setState(await getAllVideos())
+    this.setState({videos: await getVideos()})
   }
 
   render() {
     let videos = this.state.videos
+    console.log(videos)
     return (
       <div className="VideoList">
         {videos.map(v => {
