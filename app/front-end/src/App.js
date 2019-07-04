@@ -7,7 +7,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          Header placeholder
+          <h1>tüb</h1>
+          <button>Post Video</button>
         </header>
         <VideoList />
       </div>
