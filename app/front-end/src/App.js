@@ -12,9 +12,10 @@ class App extends React.Component {
   }
 
   async componentDidMount(){
+    await window.ethereum.enable()
+    console.log(await window.web3.eth.accounts[0])
     this.setState({videos: await getVideos()})
   }
-
   render() {
     let videos = this.state.videos
     console.log(videos)
@@ -22,12 +23,12 @@ class App extends React.Component {
       <div className="App">
         <header>
           <h1>tüb</h1>
-          <AddVideoForm />
+          <AddVideoForm submitVideo={this.submitVideo}/>
         </header>
         <div className="VideoList">
           {videos.map(v => {
             return <Video
-              key={v.youtubeLink}
+              key={v.primaryKey}
               link={v.youtubeLink}
               title={v.title}
               prKey={v.primaryKey}
