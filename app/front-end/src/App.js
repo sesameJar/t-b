@@ -12,13 +12,10 @@ class App extends React.Component {
   }
 
   async componentDidMount(){
-    await window.ethereum.enable()
-    console.log(await window.web3.eth.accounts[0])
     this.setState({videos: await getVideos()})
   }
   render() {
     let videos = this.state.videos
-    console.log(videos)
     return (
       <div className="App">
         <header>
