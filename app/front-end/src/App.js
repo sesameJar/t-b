@@ -1,6 +1,7 @@
 import React from 'react';
-import getVideos from './components/api'
+import {getVideos} from './components/api'
 import Video from './components/Video'
+import AddVideoForm from './components/AddVideoForm'
 import './App.css';
 class App extends React.Component {
   constructor() {
@@ -21,7 +22,7 @@ class App extends React.Component {
       <div className="App">
         <header>
           <h1>tüb</h1>
-          <addVideoForm />
+          <AddVideoForm />
         </header>
         <div className="VideoList">
           {videos.map(v => {

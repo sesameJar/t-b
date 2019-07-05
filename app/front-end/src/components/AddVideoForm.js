@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class addVideoForm extends Component {
+class AddVideoForm extends Component {
     constructor(){
         super()
         this.state = {}
@@ -21,4 +21,4 @@ class addVideoForm extends Component {
     }
 }
 
-export default addVideoForm;
+export default AddVideoForm;
