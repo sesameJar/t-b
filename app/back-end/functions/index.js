@@ -4,6 +4,17 @@ const cors = require('cors')({origin :true})
 const website = require('./db/videos')
 const serviceAccount = require('./t-b-d-b-firebase-adminsdk-kk3ut-b41be08488.json');
 
+function validate(data){
+    if (!data.youtubeLink){
+        throw("Invalid link")
+    }
+    if (!data.publicKey){
+        throw("Invalid public key")
+    }
+    if (!data.title) {
+        throw("Invalid title")
+    }
+}
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -26,14 +37,14 @@ exports.getVideos = functions.https.onRequest((req,res) => {
 exports.addVideo = functions.https.onRequest((req,res) => {
     return cors(req,res, async ()=> {
         try {
-            // const videos = await website.getVideos(admin.database())
             const data = {
                 date : Date.now(),
-                youtubeLink : "https://www.youtube.com/watch?v=Se5E4PbOZHc",
-                publicKey : "myPUblicKey",
-                title : "Firebase tutorial",
-                tips : 5
+                youtubeLink : req.body.youtubeLink,
+                publicKey : req.body.publicKey,
+                title : req.body.title,
+                tips : 0
             }
+            validate(data)
             const video = await website.addVideo(admin.database(), data)
             console.log("video:" +  video)
             return res.status(200).json(video)
