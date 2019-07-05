@@ -9,4 +9,13 @@ const getVideos = async () => {
   return json
 }
 
-export default getVideos
+const getVideo = async () => {
+  const response = await fetch(`${config.development.backendUrl}/getVideo`, {
+    method : "get",
+    mode : "cors"
+  })
+  let json = await response.json()
+  return json
+}
+
+export default {getVideos, getVideo}
