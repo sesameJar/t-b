@@ -9,12 +9,12 @@ class Tip extends Component {
 
   sendTip = async e => {
     e.preventDefault();
-    // let tx = await TubFunctions.tip("0x06854f66338A7F9FD597E790A12F9E930D4Bd88B");
-    // console.log(tx)
-    // return tx;
+    let tx = await TubFunctions.tip("0x06854f66338A7F9FD597E790A12F9E930D4Bd88B");
+    console.log(tx)
+    return tx;
 
-    let balance = await TubFunctions.checkBalance()
-    console.log(balance)
+    // let balance = await TubFunctions.checkBalance()
+    // console.log(balance)
   };
 
   render() {
