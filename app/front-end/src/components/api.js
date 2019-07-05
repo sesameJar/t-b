@@ -18,4 +18,4 @@ const getVideo = async () => {
   return json
 }
 
-export default {getVideos, getVideo}
+export {getVideos, getVideo}
