@@ -19,7 +19,6 @@ const getVideo = async () => {
 };
 
 const addVideo = async data => {
-  console.log("api data", data);
   const response = await fetch(`${config.development.backendUrl}/addVideo`, {
     method: "post",
     mode: "cors",

@@ -25,9 +25,9 @@ exports.getVideos = functions.https.onRequest((req, res) => {
   return cors(req, res, async () => {
     try {
       const videoList = await website.getVideos(admin.database());
-      return res.status(200).json(videoList);
+      return res.status(200).json(videoList)
     } catch (err) {
-      return res.status(500).json(err);
+      return res.status(500).json(err)
     }
   });
 });
@@ -36,9 +36,9 @@ exports.getVideo = functions.https.onRequest((req, res) => {
   return cors(req, res, async () => {
     try {
       const video = await website.getVideo(req.query.prKey, admin.database());
-      return res.status(200).json(video);
+      return res.status(200).json(video)
     } catch (err) {
-      return res.status(500).json(err);
+      return res.status(500).json(err)
     }
   });
 });
@@ -55,10 +55,26 @@ exports.addVideo = functions.https.onRequest((req, res) => {
       };
       validate(data);
       const video = await website.addVideo(admin.database(), data);
-      return res.status(200).json(video);
+      return res.status(200).json(video)
     } catch (err) {
       console.log(err);
-      return res.status(500).json(err);
+      return res.status(500).json(err)
     }
   });
 });
+
+exports.tip = functions.https.onRequest((req, res) => {
+  return cors(req, res, async () => {
+    const data = {
+      primaryKey : req.query.prKey,
+      tip : req.query.tip
+    }
+    try {
+      const newValue = await website.tip(admin.database(), data)
+      return res.status(200).json(newValue)
+    } catch (err) {
+      console.log(err)
+      return res.status(500).json(err)
+    }
+  })
+})
