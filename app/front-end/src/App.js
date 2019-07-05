@@ -2,6 +2,7 @@ import React from 'react';
 import {getVideos} from './components/api'
 import Video from './components/Video'
 import AddVideoForm from './components/AddVideoForm'
+import Tip from './components/Tip'
 import './App.css';
 class App extends React.Component {
   constructor() {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <header>
           <h1>tüb</h1>
           <AddVideoForm submitVideo={this.submitVideo}/>
+          <Tip />
         </header>
         <div className="VideoList">
           {videos.map(v => {
