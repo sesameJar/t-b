@@ -25,7 +25,6 @@ const addVideo = async data => {
     mode: "cors",
     headers: {
       "Content-Type": "application/json"
-      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: JSON.stringify(data)
   });
@@ -33,5 +32,7 @@ const addVideo = async data => {
   let primaryKey = await response.json();
   return primaryKey;
 };
+
+
 
 export { getVideos, getVideo, addVideo };
