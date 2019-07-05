@@ -39,12 +39,8 @@ class App extends React.Component {
       <div className="App">
         <header>
           <h1>tüb</h1>
-<<<<<<< HEAD
           <AddVideoForm submitVideo={this.submitVideo}/>
           <Tip />
-=======
-          <AddVideoForm submitVideo={this.submitVideo} />
->>>>>>> backend-tip
         </header>
         <div className="VideoList">
           {videos.map(v => {
