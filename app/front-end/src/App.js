@@ -3,7 +3,6 @@ import { getVideos } from "./components/api";
 import Video from "./components/Video";
 import AddVideoForm from "./components/AddVideoForm";
 import Player from './components/Player'
-import Tip from "./components/Tip";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { addVideo } from "./components/api";
@@ -27,7 +26,6 @@ class App extends React.Component {
         <header>
           <h1>tüb</h1>
           <AddVideoForm submitVideo={this.submitVideo} />
-          <Tip />
         </header>
         <div className="VideoList">
           {videos.map(v => {
