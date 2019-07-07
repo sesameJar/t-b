@@ -2,7 +2,7 @@
 
 tüb is a decentralized video platform which aims to solve the problems Youtube currently has with advertisers, demonetization, and censorship.
 
-View the site [here](https://t-b-d-b.firebaseapp.com/).
+View the site [here](https://t-b-d-b.firebaseapp.com/). Please use the **ropsten** testnet.
 
 Metamask is required to post videos or send tips to creators.
 
