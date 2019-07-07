@@ -9,8 +9,8 @@ const getVideos = async () => {
   return json;
 };
 
-const getVideo = async () => {
-  const response = await fetch(`${config.development.backendUrl}/getVideo`, {
+const getVideo = async (prKey) => {
+  const response = await fetch(`${config.development.backendUrl}/getVideo/?prKey=${prKey}`, {
     method: "get",
     mode: "cors"
   });
@@ -19,7 +19,6 @@ const getVideo = async () => {
 };
 
 const addVideo = async data => {
-  console.log("api data", data);
   const response = await fetch(`${config.development.backendUrl}/addVideo`, {
     method: "post",
     mode: "cors",
