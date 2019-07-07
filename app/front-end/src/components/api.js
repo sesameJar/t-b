@@ -1,7 +1,7 @@
 import config from "../config/config";
 
 const getVideos = async () => {
-  const response = await fetch(`${config.development.backendUrl}/getVideos`, {
+  const response = await fetch(`${config.backendUrl}/getVideos`, {
     method: "get",
     mode: "cors"
   });
@@ -10,7 +10,7 @@ const getVideos = async () => {
 };
 
 const getVideo = async () => {
-  const response = await fetch(`${config.development.backendUrl}/getVideo`, {
+  const response = await fetch(`${config.backendUrl}/getVideo`, {
     method: "get",
     mode: "cors"
   });
@@ -19,7 +19,7 @@ const getVideo = async () => {
 };
 
 const addVideo = async data => {
-  const response = await fetch(`${config.development.backendUrl}/addVideo`, {
+  const response = await fetch(`${config.backendUrl}/addVideo`, {
     method: "post",
     mode: "cors",
     headers: {
