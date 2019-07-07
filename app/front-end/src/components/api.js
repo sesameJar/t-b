@@ -10,7 +10,7 @@ const getVideos = async () => {
 };
 
 const getVideo = async (prKey) => {
-  const response = await fetch(`${config.development.backendUrl}/getVideo/?prKey=${prKey}`, {
+  const response = await fetch(`${config.backendUrl}/getVideo/?prKey=${prKey}`, {
     method: "get",
     mode: "cors"
   });
