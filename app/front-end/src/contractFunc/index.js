@@ -9,9 +9,14 @@ class tubfunc{
         this.contract=""
     }
 
-    async tip (address) {
+    async tip (address,amount) {
+        console.log(`
+            Tip function trigered :
+            receiver : ${address} 
+            tipAmount : ${amount}
+        `)
         let tx = await this.contract.tip(address, {
-            value : utils.parseUnits('1023000', 'gwei')
+            value : utils.parseUnits(amount, 'gwei')
         } )
         return tx
     }
@@ -24,7 +29,6 @@ class tubfunc{
 
     async initialized() {
         let T_b_ABI = T_b.abiDefinition;
-// let T_b_BCODE = T_b.code;
 
          this.provider = new ethers.providers.Web3Provider(window.web3.currentProvider);
 
