@@ -51,9 +51,10 @@ class App extends React.Component {
     };
 
     await window.ethereum.enable();
-    let publicKey = window.web3.eth.accounts[0];
+    let publicKey = await window.web3.eth.accounts[0];
     data.publicKey = publicKey;
     let primaryKey = await addVideo(data);
+    primaryKey = primaryKey.primaryKey
     let videoList = this.state.videos;
     videoList.unshift({
       primaryKey: primaryKey,
