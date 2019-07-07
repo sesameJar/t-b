@@ -35,7 +35,7 @@ class tubfunc{
     }
 }
 
-module.exports = tubfunc
+export default tubfunc
 
 
 
