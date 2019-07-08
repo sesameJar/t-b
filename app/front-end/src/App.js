@@ -6,6 +6,11 @@ import Player from './components/Player'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { addVideo } from "./components/api";
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '@material-ui/core/AppBar';
 
 class App extends React.Component {
   constructor() {
@@ -23,22 +28,29 @@ class App extends React.Component {
     let videos = this.state.videos;
     return (
       <div className="App">
-        <header>
-          <h1>tüb</h1>
+        <AppBar  position="static" color="default">
+          <Toolbar variant="dense">
+            <Typography className="title" variant="h6" color="inherit">
+              tüb
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <CssBaseline />
+        <Container maxWidth="md">
           <AddVideoForm submitVideo={this.submitVideo} />
-        </header>
-        <div className="VideoList">
-          {videos.map(v => {
-            return (
-              <Video
-                key={v.primaryKey}
-                link={v.youtubeLink}
-                title={v.title}
-                prKey={v.primaryKey}
-              />
-            );
-          })}
-        </div>
+          <div className="VideoList">
+            {videos.map(v => {
+              return (
+                <Video
+                  key={v.primaryKey}
+                  link={v.youtubeLink}
+                  title={v.title}
+                  prKey={v.primaryKey}
+                />
+              );
+            })}
+          </div>
+        </Container>
       </div>
     );
   };
